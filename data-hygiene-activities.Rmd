@@ -1,0 +1,18 @@
+---
+title: "data-hygiene-activities"
+author: "Rick Gilmore"
+date: "`r Sys.time()`"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data file formats
+
+1. Find a raw data file from your lab group that does _not_ have identifiers. Describe how the file does or does not follow best practices. Describe the sequence of steps you would need to take to transform it into a file that followed these practices.
+
+## Data directories
+
+2. Describe the data directory/file organizational scheme for a project in your laboratory.

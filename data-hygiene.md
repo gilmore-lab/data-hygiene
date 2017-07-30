@@ -1,7 +1,7 @@
 data-hygiene
 ================
 Rick Gilmore
-2017-07-30 14:15:44
+2017-07-30 14:29:51
 
 Goals
 -----
@@ -33,12 +33,29 @@ Best practices
     -   Each row is an observation
     -   Each column is a variable
     -   Files are 'rectangular'
+    -   Files are usually 'longer' than they are wide
     -   Each cell is filled, even with `NA` if needed.
--   Avoid spaces in file names (& variable names); use hyphens "-" or underscores "\_" to make file names human readable.
+-   Avoid spaces in file names (& variable names); use hyphens "-" or underscores "\_" to separate multiple words or elements to make file names human readable.
     -   This makes file names "parsable"
     -   If important metadata (e.g., participant ID, condition, or test date) aren't in the file, put them in the file name: `<participant-id>-<YYYY-MM-DD>-condA.csv`
+        -   `p001-2017-07-31-condA.csv`
+        -   `p001-2017-07-30-condB.csv`
 -   When using dates, use the YYYY-MM-DD format.
+-   Zero-pad numbers (~~2~~ -&gt; 002), so that your file names of a similar type have the same length.
 
 ### Data directories
 
--
+-   Choose an organizational scheme and stick with it for the duration of your project.
+    -   By participant, by measure
+        -   `p001/survey/p001-2017-07-31-survey.csv`
+        -   `p001/stroop/p001-2017-07-31-stroop.csv`
+    -   By measure, by participant
+        -   `survey/p001/...`
+        -   `stroop/p001/...`
+-   If you have non-text source files, e.g., `*.xlsx`, duplicate the above structure for each data file format type.
+    -   `data/csv/p001/...`
+    -   `data/xlsx/p001/...`
+    -   `data/xlsx/survey/...`
+    -   `data/csv/stroop/...`
+
+### Making data 'tidy'
