@@ -14,9 +14,9 @@ knitr::opts_chunk$set(echo = TRUE)
 1. Reduce time spent on data cleaning/munging.
 2. Produce 'tidy' data sets that can be easily updated, shared, re-used.
 
-## Best practices
+# Best practices
 
-### Data file formats
+## Data file formats
 
 - Store and save data files as text, preferably in comma-separated value (CSV) format.
 
@@ -31,7 +31,7 @@ variable_1,"variable 2",variable_3,variable_4
 
 - Save data files in the rawest, most 'micro' state possible
     - trial-by-trial, response-by-response
-    - separate files for each participant & measure
+    - separate files for each participant & measure & session
 - Write scripts/syntax to aggregate files across participants & measures
 
 - Adopt a 'tidy' data ([Wickham, 2014](http://dx.doi.org/10.18637/jss.v059.i10)) format
@@ -40,16 +40,19 @@ variable_1,"variable 2",variable_3,variable_4
     - Files are 'rectangular'
     - Files are usually 'longer' than they are wide
     - Each cell is filled, even with `NA` if needed.
-    
-- Avoid spaces in file names (& variable names); use hyphens "-" or underscores "_" to separate multiple words or elements to make file names human readable.
+
+## Naming conventions
+
+- Avoid spaces in file names (& variable names); instead, use hyphens "-" or underscores "_" to separate multiple words or elements to make file names human readable.
     - This makes file names "parsable"
     - If important metadata (e.g., participant ID, condition, or test date) aren't in the file, put them in the file name: `<participant-id>-<YYYY-MM-DD>-condA.csv`
         - `p001-2017-07-31-condA.csv`
         - `p001-2017-07-30-condB.csv`
+- Similarly, avoid special characters in file names, see ([Broman & Lee, 2017](https://github.com/kbroman/Paper_DataOrg/blob/master/manuscript.md#choose-good-names-for-things)).
 - When using dates, use the YYYY-MM-DD format.
 - Zero-pad numbers (~~2~~ -> 002), so that your file names of a similar type have the same length.
     
-### Data directories
+## Data directories
 
 - Choose an organizational scheme and stick with it for the duration of your project.
     - By participant, by measure
@@ -64,8 +67,12 @@ variable_1,"variable 2",variable_3,variable_4
     - `data/xlsx/survey/...`
     - `data/csv/stroop/...`
     
-## Data dictionaries
+## Create data dictionaries
 
-### Making data 'tidy'
+- See ([Broman & Lee, 2017](https://github.com/kbroman/Paper_DataOrg/blob/master/manuscript.md#create-a-data-dictionary))
+
+## Making data 'tidy'
+
+
 
 
